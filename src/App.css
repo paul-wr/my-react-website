@@ -76,7 +76,7 @@ color: #f2f2f2;
 }
 
 #main-article {
-  padding: 20px;
+padding: 20px;
 column-count: 3; 
 column-gap: 4em; 
 }
@@ -154,6 +154,9 @@ media queries
 */
 
 @media screen and (max-width: 500px){
+#main-article {
+column-count: 1!important;  
+}
 .fa-dz-nav {
 display: block;  
 position: absolute;
@@ -177,6 +180,9 @@ background-size: cover;
 }
 
 @media screen and (max-width: 900px){
+#main-article {
+column-count: 2;  
+}  
 .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{
 display: block;
 width: 100%;
