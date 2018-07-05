@@ -1,0 +1,275 @@
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin:0 auto;
+  padding: 0;
+}
+
+#wrapper {
+  font-family: Arial;
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  "section section section"
+  "footer footer footer";
+  grid-template-rows: 100px 1fr 120px; /* top & bottom rows specified and the inner amounts to 1 frame */
+  grid-template-columns: repeat(3, 1fr); /* top & bottom cols specified and the inner amounts to 1 frame */
+  grid-gap: 7px;
+  height: 100vh;
+  margin: 0px;
+}
+
+
+/*
+==============
+Nav
+==============
+*/
+.main-nav {
+margin-top: 1.7em;
+list-style-type: none;
+text-align: right;
+}
+.main-nav .icon {
+display: none;
+}
+
+.main-nav li {
+display: inline;
+font-size: 17px;
+font-weight: 500;
+padding: 7px 14px;
+width: 20px;
+text-transform: uppercase;
+}
+
+.main-nav li a {
+color: #fff;
+text-decoration: none;
+}
+
+.responsive-nav {
+  display: block!important;
+}
+
+header, section, footer {
+  padding: 5px;
+}
+
+header {
+  background-color: #052551;
+  grid-area: header;
+}
+
+
+section {
+  background-color: #fbfbfb;
+  grid-area: section;
+
+}
+
+footer {
+  background-color: #052551;
+  grid-area: footer;
+}
+
+.fa-dz-nav {
+background: #052551;
+color: #fff;
+font-size: 29px;
+display: none;
+cursor: pointer;
+top: 30px;
+right: 10px;
+}
+
+/* 
+=============
+media queries 
+=============
+*/
+
+@media screen and (max-width: 500px){
+.fa-dz-nav {
+display: block;  
+position: absolute;
+top: 30px;
+right: 10px;
+} 
+#logo-box, .custom-logo-link, .custom-logo {
+max-width: 100%;  
+height: auto;
+}
+#home-section-one {
+background-image: url('https://digitize-z-paulwr.c9users.io/wp-content/uploads/2018/06/zurich.png');
+/* Full height */
+height: 300px; 
+width:100%;
+/* Create the parallax scrolling effect */;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+}
+
+@media screen and (max-width: 900px){
+.span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{
+display: block;
+width: 100%;
+text-align: center;
+margin-bottom: 12px;
+} 
+.main-nav li {
+display: block;
+font-size: 17px;
+font-weight: 500;
+padding: 14px;
+width: auto;
+text-transform: uppercase;
+text-align: center;
+background: #052551;
+margin-top: 1px;
+  } 
+.main-nav li a {
+color: #fbfbfb;
+padding:0 35%;
+}  
+.sub-menu {
+position: relative;
+margin:0 auto;
+padding: 5px;
+}
+
+.sub-menu li {
+background-color: #f2f2f2;  
+padding: 5px!important;
+text-align: left;
+}
+
+.sub-menu li a {
+color: #052551;  
+}
+.main-nav {
+text-align: center;
+padding: 0;
+width: 100%;
+display: none;
+background-color: #f2f2f2;
+  }  
+.fa-dz-nav{
+display: block;  
+position: absolute;
+top: 50px;
+right: 10px;
+  }  
+.main-nav li:hover {
+border-top: 0px solid #fbfbfb;
+  }  
+.main-nav li.current-menu-item {
+background-color: #fbfbfb;
+border: 0px solid #f2f2f2;
+  }  
+.main-nav li.current-menu-item a {
+color: #111;
+  }  
+}
+
+@media screen and (min-width: 900px){
+  /* start of hover effects */
+.main-nav li {
+  position: relative;
+  }
+.main-nav li:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+  }
+
+.sub-menu li:after, .sub-menu li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  margin: auto;
+  width: 50%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 0px!important;
+  }
+.main-nav li:hover:after{
+  width: 100%;
+  }
+.main-nav li.current-item-menu:not(.sub-menu) {
+border-top: 3px solid #f2f2f2;
+  } 
+
+
+
+.main-nav li,
+.main-nav li:after,
+.main-nav li:before {
+  transition: all .5s;
+  }
+/* end */
+.icon-content {
+padding: 1em 1em 1em 3em;
+  }
+}
+
+
+
+/*
+============
+Transitions
+============
+*/
+.animate{
+animation-name: opacity-fade;
+animation-duration: .5s;
+animation-fill-mode: forwards;  
+-webkit-animation-name: opacity-fade;
+-webkit-animation-duration: .5s;
+-webkit-animation-fill-mode: forwards;  
+}
+
+.animate-li{
+animation-name: nav-margin;
+animation-duration: .8s;
+animation-fill-mode: forwards;  
+-webkit-animation-name: nav-margin;
+-webkit-animation-duration: .8s;
+-webkit-animation-fill-mode: forwards;  
+}
+
+
+
+-webkit-@keyframes nav-margin {
+from{margin-bottom:  -25px; opacity: .2;}
+to{margin-bottom: 3px; opacity: 1}
+}
+
+@keyframes nav-margin {
+from{margin-bottom:  -25px; opacity: .2;}
+to{margin-bottom: 3px; opacity: 1}
+}
+
+-webkit-@keyframes opacity-fade {
+from{opacity: .1;}
+to{opacity: 1;}
+}
+
+@keyframes opacity-fade {
+from{opacity: .1;}
+to{opacity: 1;}
+}
+
+
