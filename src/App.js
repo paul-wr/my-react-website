@@ -91,7 +91,11 @@ class Footer extends React.Component {
 class MainImage extends React.Component {
 
   render(){
-    return <div id="home-section-one"><div id="contact-wrapper"><a class="contact" href="contact">Get in Touch</a></div></div>
+    return <div id="home-section-one"> <div id="icon-wrapper">
+      <a href="#"><i className="fa fa-facebook"></i></a>
+      <a href="#"><i className="fa fa-twitter"></i></a>
+      <a href="#"><i className="fa fa-instagram"></i></a>
+    </div>  <div id="contact-wrapper"><a class="contact" href="contact">Get in Touch</a></div></div>
   }
 }
 

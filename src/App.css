@@ -19,7 +19,7 @@ font-family: 'Raleway', sans-serif!important;
   "header header header"
   "section section section"
   "footer footer footer";
-  grid-template-rows: 100px 1fr 120px; /* top & bottom rows specified and the inner amounts to 1 frame */
+  grid-template-rows: 112px 1fr 120px; /* top & bottom rows specified and the inner amounts to 1 frame */
   grid-template-columns: repeat(3, 1fr); /* top & bottom cols specified and the inner amounts to 1 frame */
   height: 100vh;
   margin: 0px;
@@ -52,11 +52,7 @@ left: 20px;
 padding: 50px; 
 }
 
-#contact-wrapper {
-line-height: 32em; 
-position: relative;
-margin:0 auto;
-display: block;  
+#contact-wrapper {  
 text-align: center;
 }
 
@@ -65,6 +61,7 @@ color: #052551;
 border: 3px solid #052551;  
 padding: 20px 40px;
 text-decoration: none;
+line-height: 32em;
 border-radius: 4px;
 transition-property: background-color, color;
 transition-duration: .6s;
@@ -145,7 +142,35 @@ top: 30px;
 right: 10px;
 }
 
+.fa {
+background-color: #052551;
+color: #fff;
+font-size: 29px;
+padding: 5px;
+margin: 2px;
+cursor: pointer;
+top: 30px;
+right: 10px;
+}
 
+.fa-facebook {
+padding: 5px 11px;  
+}
+
+.fa-instagram {
+padding: 5px 8px;  
+}
+
+.fa-instagram, .fa-facebook, .fa-twitter {
+font-size: 22px;  
+display: block;
+}
+
+#icon-wrapper {
+position: fixed;
+top: 35%;
+right: 0px;
+}
 
 /* 
 =============
@@ -154,6 +179,9 @@ media queries
 */
 
 @media screen and (max-width: 500px){
+.contact {
+line-height: 19em;
+}
 #main-article {
 column-count: 1!important;  
 }
@@ -202,7 +230,7 @@ margin-top: 1px;
   } 
 .main-nav li a {
 color: #fbfbfb;
-padding:0 35%;
+padding: 1% 35%;
 }  
 .sub-menu {
 position: relative;
@@ -225,7 +253,7 @@ padding: 0;
 width: 100%;
 display: none;
 background-color: #f2f2f2;
-margin-top: 98px;
+margin-top: 110px;
   }  
 .fa-dz-nav{
 display: block;  
