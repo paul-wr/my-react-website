@@ -3,6 +3,8 @@ import './App.css';
 import memberOneScreenShot from './member1.jpg';
 import memberTwoScreenShot from './member2.jpg';
 import memberThreeScreenShot from './member3.jpg';
+import { Form, Text, Radio, RadioGroup, TextArea, Checkbox } from 'react-form';
+
 
 
 
@@ -45,7 +47,7 @@ class Section extends React.Component {
 
   render() {
   return <section><MainImage />
-    <div class="content">
+    <div className="content">
     <span id="ourteam"></span>
     <OurTeam />
     <article id="main-article">
@@ -105,44 +107,44 @@ class OurTeam extends React.Component {
     const memberThree = ['Lara Kent', 'lara@company.com', 888234561]
 
       return <div>
-      <div class="row">
+      <div className="row">
         <h1 id="teamHeading">Our Team</h1>
-        <hr class="customLine"/>
+        <hr className="customLine"/>
       </div>
-      <div class="row">  
-          <div class="span4">
-            <div class="teamMember">
-              <div class="memberContainer">
-                <img src={memberOneScreenShot} alt="Avatar" class="image" />
-                <div class="overlay">
-                  <div class="text">{ memberOne[1] }<br/><br/>
+      <div className="row">  
+          <div className="span4">
+            <div className="teamMember">
+              <div className="memberContainer">
+                <img src={memberOneScreenShot} alt="Avatar" className="image" />
+                <div className="overlay">
+                  <div className="text">{ memberOne[1] }<br/><br/>
                       { memberOne[0] }<br/><br/>
-                      <a class="call"  href="tel{memberOne[2]}">Call Me</a><br/><br/>
+                      <a className="call"  href="tel{memberOne[2]}">Call Me</a><br/><br/>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="span4">
-            <div class="teamMember">
-              <div class="memberContainer">
-                <img src={memberTwoScreenShot} alt="Avatar" class="image" />
-                <div class="overlay">
-                  <div class="text">{ memberTwo[1] }<br/><br/>
+          <div className="span4">
+            <div className="teamMember">
+              <div className="memberContainer">
+                <img src={memberTwoScreenShot} alt="Avatar" className="image" />
+                <div className="overlay">
+                  <div className="text">{ memberTwo[1] }<br/><br/>
                   { memberTwo[0] }<br/><br/>
-                  <a class="call" href="tel{memberTwo[2]}">Call Me</a><br/><br/></div>
+                  <a className="call" href="tel{memberTwo[2]}">Call Me</a><br/><br/></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="span4">
-            <div class="teamMember">
-              <div class="memberContainer">
-                <img src={memberThreeScreenShot} alt="Avatar" class="image" />
-                <div class="overlay">
-                  <div class="text">{ memberThree[1] }<br/><br/>
+          <div className="span4">
+            <div className="teamMember">
+              <div className="memberContainer">
+                <img src={memberThreeScreenShot} alt="Avatar" className="image" />
+                <div className="overlay">
+                  <div className="text">{ memberThree[1] }<br/><br/>
                   { memberThree[0] }<br/><br/>
-                  <a class="call"  href="tel{memberThree[2]}">Call Me</a><br/><br/></div>
+                  <a className="call" href="tel{memberTwo[2]}">Call Me</a><br/><br/></div>
                 </div>
               </div>
             </div>
@@ -160,7 +162,7 @@ class MainImage extends React.Component {
       <a href="http://facebook.com"><i className="fa fa-facebook"></i></a><br/>
       <a href="http://twitter.com"><i className="fa fa-twitter"></i></a><br/>
       <a href="http://instagram.com"><i className="fa fa-instagram"></i></a><br/>
-    </div>  <div id="contact-wrapper"><a class="contact" href="#contact">Get in Touch</a></div></div>
+    </div>  <div id="contact-wrapper"><a className="contact" href="#contact">Get in Touch</a></div></div>
   }
 }
 
@@ -185,12 +187,31 @@ class App extends Component {
   }
 }
 
+const validate = value => ({
+  error: !value || !/Hello World/.test(value) ? "Input must contain 'Hello World'" : null,
+  warning: !value || !/^Hello World$/.test(value) ? "Input should equal just 'Hello World'" : null,
+  success: value && /Hello World/.test(value) ? "Thanks for entering 'Hello World'!" : null
+})
+
 class Contact extends React.Component {
 
+
   render() { 
+
     return <div>
       <h1 id="teamHeading">Contact</h1>
-      <hr class="customLine"/>
+      <hr className="customLine"/>
+        <Form>
+          {formApi => (
+            <form onSubmit={formApi.submitForm} id="form1" className="mb-4">
+              <label htmlFor="hello">Hello World</label>
+              <Text field="hello" id="hello" validate={validate} />
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          )}
+        </Form>
     </div>  
   }
 

@@ -327,6 +327,19 @@ width: 30px;
 background-color: transparent;
 }
 
+/*
+===========
+Form
+===========
+*/
+#contactForm {
+width: 500px;
+margin: 0 auto;
+position: relative;  
+display: block;
+text-align: center;
+}
+
 /* 
 =============
 media queries 
