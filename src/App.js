@@ -31,7 +31,7 @@ class Header extends React.Component {
 
   render() {
   return <header><h1 id="header-text">My React Website</h1><ul className="main-nav">
-      <li><a href="#">Home</a></li>
+      <li><a href="">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#ourteam">Our Team</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -64,7 +64,6 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
 <hr />
-<span id="contact"></span>
  What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
@@ -81,6 +80,8 @@ Where can I get some?
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
   </article>
   </div>
+  <span id="contact"></span>
+  <Contact />
   </section>;
   }
 
@@ -89,7 +90,7 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 class Footer extends React.Component {
 
   render() {
-  return <footer></footer>;
+  return <footer><cite>&copy; 2018 Company</cite></footer>;
   }
 
 }
@@ -156,9 +157,9 @@ class MainImage extends React.Component {
 
   render(){
     return <div id="home-section-one"> <div id="icon-wrapper">
-      <a href="#"><i className="fa fa-facebook"></i></a>
-      <a href="#"><i className="fa fa-twitter"></i></a>
-      <a href="#"><i className="fa fa-instagram"></i></a>
+      <a href="http://facebook.com"><i className="fa fa-facebook"></i></a><br/>
+      <a href="http://twitter.com"><i className="fa fa-twitter"></i></a><br/>
+      <a href="http://instagram.com"><i className="fa fa-instagram"></i></a><br/>
     </div>  <div id="contact-wrapper"><a class="contact" href="#contact">Get in Touch</a></div></div>
   }
 }
@@ -182,6 +183,17 @@ class App extends Component {
   responsiveNavFunction = () => {
     console.log('this is:', this);
   }
+}
+
+class Contact extends React.Component {
+
+  render() { 
+    return <div>
+      <h1 id="teamHeading">Contact</h1>
+      <hr class="customLine"/>
+    </div>  
+  }
+
 }
 
 

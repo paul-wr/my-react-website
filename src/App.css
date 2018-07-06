@@ -91,6 +91,7 @@ color: #f2f2f2;
 padding: 20px;
 column-count: 3; 
 column-gap: 4em; 
+margin-top: 5em;
 }
 
 /*
@@ -241,28 +242,36 @@ text-decoration: none;
 }
 
 .responsive-nav {
-  display: block!important;
+display: block!important;
 }
 
 header, footer {
-  padding: 5px;
+padding: 5px;
 }
 
 header {
-  background-color: #052551;
-  grid-area: header;
+background-color: #052551;
+grid-area: header;
 }
 
 
 section {
-  background-color: #fbfbfb;
-  grid-area: section;
+background-color: #fbfbfb;
+grid-area: section;
 
 }
 
 footer {
-  background-color: #052551;
-  grid-area: footer;
+background-color: #052551;
+grid-area: footer;
+text-align: center;
+padding: 40px;
+
+}
+
+footer cite {
+color: #fff;  
+text-align: center;
 }
 
 .fa-dz-nav {
@@ -282,27 +291,40 @@ font-size: 29px;
 padding: 5px;
 margin: 2px;
 cursor: pointer;
-top: 30px;
-right: 10px;
 }
 
 .fa-facebook {
-padding: 5px 11px;  
+padding: 5px 9px;  
 }
 
 .fa-instagram {
-padding: 5px 8px;  
+padding: 5px 9px;  
+}
+.fa-twitter {
+padding: 5px 9px;  
 }
 
 .fa-instagram, .fa-facebook, .fa-twitter {
 font-size: 22px;  
 display: block;
+transition-duration: .7s;
+transition-property: width, opacity;
+width: 20px;
+float: right;
+opacity: .5;
+}
+
+.fa-instagram:hover, .fa-facebook:hover, .fa-twitter:hover {
+width: 50px;  
+opacity: 1;
 }
 
 #icon-wrapper {
 position: fixed;
 top: 50%;
-right: 0px;
+right: 1px;
+width: 30px;
+background-color: transparent;
 }
 
 /* 
