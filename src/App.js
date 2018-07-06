@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import memberOneScreenShot from './member1.jpg';
+import memberTwoScreenShot from './member2.jpg';
+import memberThreeScreenShot from './member3.jpg';
+
 
 
 class Header extends React.Component {
@@ -28,8 +32,8 @@ class Header extends React.Component {
   render() {
   return <header><h1 id="header-text">My React Website</h1><ul className="main-nav">
       <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Our Team</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#ourteam">Our Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul><i className="fa fa-dz-nav fa-bars" onClick={this.onClick}></i>
   </header>;
@@ -42,6 +46,8 @@ class Section extends React.Component {
   render() {
   return <section><MainImage />
     <div class="content">
+    <span id="ourteam"></span>
+    <OurTeam />
     <article id="main-article">
     What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -88,6 +94,64 @@ class Footer extends React.Component {
 
 }
 
+
+class OurTeam extends React.Component {
+ 
+
+  render() {
+    const memberOne = ['Whan Khan', 'whan@company.com', 888234567]
+    const memberTwo = ['Joshua Dylan', 'joshua@company.com', 888234564]
+    const memberThree = ['Lara Kent', 'lara@company.com', 888234561]
+
+      return <div>
+      <div class="row">
+        <h1 id="teamHeading">Our Team</h1>
+        <hr class="customLine"/>
+      </div>
+      <div class="row">  
+          <div class="span4">
+            <div class="teamMember">
+              <div class="memberContainer">
+                <img src={memberOneScreenShot} alt="Avatar" class="image" />
+                <div class="overlay">
+                  <div class="text">{ memberOne[1] }<br/><br/>
+                      { memberOne[0] }<br/><br/>
+                      <a class="call"  href="tel{memberOne[2]}">Call Me</a><br/><br/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="teamMember">
+              <div class="memberContainer">
+                <img src={memberTwoScreenShot} alt="Avatar" class="image" />
+                <div class="overlay">
+                  <div class="text">{ memberTwo[1] }<br/><br/>
+                  { memberTwo[0] }<br/><br/>
+                  <a class="call" href="tel{memberTwo[2]}">Call Me</a><br/><br/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="teamMember">
+              <div class="memberContainer">
+                <img src={memberThreeScreenShot} alt="Avatar" class="image" />
+                <div class="overlay">
+                  <div class="text">{ memberThree[1] }<br/><br/>
+                  { memberThree[0] }<br/><br/>
+                  <a class="call"  href="tel{memberThree[2]}">Call Me</a><br/><br/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>  
+  }
+
+}
+
 class MainImage extends React.Component {
 
   render(){
@@ -95,7 +159,7 @@ class MainImage extends React.Component {
       <a href="#"><i className="fa fa-facebook"></i></a>
       <a href="#"><i className="fa fa-twitter"></i></a>
       <a href="#"><i className="fa fa-instagram"></i></a>
-    </div>  <div id="contact-wrapper"><a class="contact" href="contact">Get in Touch</a></div></div>
+    </div>  <div id="contact-wrapper"><a class="contact" href="#contact">Get in Touch</a></div></div>
   }
 }
 
