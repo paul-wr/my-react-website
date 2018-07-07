@@ -237,11 +237,11 @@ class Contact extends React.Component {
         <form id="contactForm" onSubmit={this.handleSubmit}>
         <h2>Contact our Team</h2>
         <label>
-          Name:<br/>
+          Name:*<br/>
           <input type="text" pattern="[A-Ba-b]{5}" value={this.state.fname} onChange={this.handleChange} placeholder="First Name" required />
         </label>
         <label>
-          Email:<br/>
+          Email:*<br/>
           <input type="email" value={this.state.email} onChange={this.handleChange} placeholder="Last Name" required />
         </label>
         <label><br/>
