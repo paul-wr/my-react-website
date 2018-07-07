@@ -3,10 +3,10 @@
 
 
 html, body {
-  width: 100%;
-  min-height: 100%;
-  margin:0 auto;
-  padding: 0;
+width: 100%;
+min-height: 100%;
+margin:0 auto;
+padding: 0;
 }
 
 body {
@@ -35,7 +35,7 @@ grid-template-areas:
 "header header header"
 "section section section"
 "footer footer footer";
-grid-template-rows: 112px 1fr 120px; /* top & bottom rows specified and the inner amounts to 1 frame */
+grid-template-rows: 112px 1fr 160px; /* top & bottom rows specified and the inner amounts to 1 frame */
 grid-template-columns: repeat(3, 1fr); /* top & bottom cols specified and the inner amounts to 1 frame */
 height: 100vh;
 margin: 0px;
@@ -93,6 +93,15 @@ column-count: 3;
 column-gap: 4em; 
 margin-top: 5em;
 }
+
+address {
+font-weight: lighter;
+font-family: Arial;  
+padding: 7px; 
+font-size: 14px;
+color: #fff;  
+}
+
 
 /*
 ================
@@ -325,6 +334,7 @@ top: 50%;
 right: 1px;
 width: 30px;
 background-color: transparent;
+z-index: 1000!important;
 }
 
 /*
@@ -333,11 +343,55 @@ Form
 ===========
 */
 #contactForm {
-width: 500px;
+width: 70%;  
+max-width: 500px;
 margin: 0 auto;
 position: relative;  
 display: block;
-text-align: center;
+text-align: left;
+padding: 0 5% 5% 5%;
+}
+
+#contactForm textarea {
+width: 100%;  
+height: 100px;
+}
+
+#contactForm input {
+height: 20px;  
+width: 100%;
+}
+
+#contactForm input[type=submit] {
+margin-top: 5px;  
+height: auto;  
+width: 20%;
+background-color: #052551; 
+color: #f2f2f2;
+padding: 10px;
+}
+
+#success {
+margin-top: 20px;
+display: block;
+border: 3px solid green;  
+padding: 10px;
+display: none;
+}
+
+input[type=submit]:focus, input[type=submit]:active, input[type=submit].active, input[type=submit]:focus:active {
+background-image: none;
+outline: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+input:invalid {
+border: 1px solid #c50000;
+}
+
+form h2 {
+text-align: center;;  
 }
 
 /* 

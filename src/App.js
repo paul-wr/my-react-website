@@ -3,7 +3,6 @@ import './App.css';
 import memberOneScreenShot from './member1.jpg';
 import memberTwoScreenShot from './member2.jpg';
 import memberThreeScreenShot from './member3.jpg';
-import { Form, Text, Radio, RadioGroup, TextArea, Checkbox } from 'react-form';
 
 
 
@@ -50,6 +49,9 @@ class Section extends React.Component {
     <div className="content">
     <span id="ourteam"></span>
     <OurTeam />
+    <span id="about"></span>
+    <h1 id="teamHeading">About</h1>
+    <hr className="customLine"/>
     <article id="main-article">
     What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -92,7 +94,15 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 class Footer extends React.Component {
 
   render() {
-  return <footer><cite>&copy; 2018 Company</cite></footer>;
+  return <footer><cite>&copy; 2018 Company
+  </cite>
+  <address>
+    Visit us at:<br/>
+    Example.com<br/>
+    Box 564, Disneyland<br/>
+    USA
+    </address>
+  </footer>;
   }
 
 }
@@ -187,13 +197,36 @@ class App extends Component {
   }
 }
 
-const validate = value => ({
-  error: !value || !/Hello World/.test(value) ? "Input must contain 'Hello World'" : null,
-  warning: !value || !/^Hello World$/.test(value) ? "Input should equal just 'Hello World'" : null,
-  success: value && /Hello World/.test(value) ? "Thanks for entering 'Hello World'!" : null
-})
+
 
 class Contact extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    
+    document.querySelector('#success').style.display = 'block'; 
+
+    document.querySelector('textarea').value = '';
+
+    let inputs = document.querySelectorAll('input');
+    for(let i = 0; i < inputs.length; i++){
+        if(inputs[i].type != 'submit'){
+        inputs[i].value = '';
+      }
+    }
+    event.preventDefault();
+  }
 
 
   render() { 
@@ -201,17 +234,24 @@ class Contact extends React.Component {
     return <div>
       <h1 id="teamHeading">Contact</h1>
       <hr className="customLine"/>
-        <Form>
-          {formApi => (
-            <form onSubmit={formApi.submitForm} id="form1" className="mb-4">
-              <label htmlFor="hello">Hello World</label>
-              <Text field="hello" id="hello" validate={validate} />
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </form>
-          )}
-        </Form>
+        <form id="contactForm" onSubmit={this.handleSubmit}>
+        <h2>Contact our Team</h2>
+        <label>
+          First Name:<br/>
+          <input type="text" value={this.state.fname} onChange={this.handleChange} placeholder="First Name" required />
+        </label>
+        <label>
+          Last Name:<br/>
+          <input type="email" value={this.state.lname} onChange={this.handleChange} placeholder="Last Name" required />
+        </label>
+        <label><br/>
+          Message: <br/>
+          <textarea type="text" value={this.state.tarea} onChange={this.handleChange} placeholder="Message..." />
+        </label><br/>
+        <input type="submit" value="Submit" />
+        <span id="success">Thank you for contacting us.<br/> A member of staff will be in touch shortly.</span>
+      </form>
+        
     </div>  
   }
 
