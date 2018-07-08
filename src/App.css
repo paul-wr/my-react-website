@@ -432,9 +432,8 @@ media queries
 #home-section-one {
 background-image: url('city_mobile.png');
 /* Full height */
-height: 32em; 
-width:100%;
 /* Create the parallax scrolling effect */;
+background-size: 100% 635px!important;
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
@@ -470,16 +469,6 @@ right: 10px!important;
 #logo-box, .custom-logo-link, .custom-logo {
 max-width: 100%;  
 height: auto;
-}
-#home-section-one {
-/* Full height */
-height: 300px; 
-width:100%;
-/* Create the parallax scrolling effect */;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
 }
 }
 
