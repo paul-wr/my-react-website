@@ -154,7 +154,7 @@ color: white;
 font-size: 15px;
 position: absolute;
 padding-top: 20px;
-top: 50%;
+top: 55%;
 line-height: 1.8em;
 left: 50%;
 -webkit-transform: translate(-50%, -50%);
@@ -306,6 +306,17 @@ margin: 2px;
 cursor: pointer;
 }
 
+.fa-envelope {
+background-color: transparent;
+color: #052551;
+font-size: 2.5em;
+padding: 5px;
+margin: 2px;  
+display: block;
+text-align: center;
+cursor: default;
+}
+
 .fa-facebook {
 padding: 5px 9px;  
 }
@@ -390,9 +401,12 @@ outline: none;
 box-shadow: none;
 }
 
-input:invalid {
-border: 1px solid #c50000;
+
+input[type=submit] {
+cursor: pointer;  
 }
+
+
 
 form h2 {
 text-align: center;;  
@@ -414,6 +428,7 @@ width: 80%;
 .text {
 font-size: 14px;
 padding-top: 14px;
+line-height: 2em;
 }
 .contact {
 line-height: 19em;

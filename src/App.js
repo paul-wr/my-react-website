@@ -236,9 +236,10 @@ class Contact extends React.Component {
       <hr className="customLine"/>
         <form id="contactForm" onSubmit={this.handleSubmit}>
         <h2>Contact our Team</h2>
+        <i class="fa fa-envelope"></i>
         <label>
           Name:*<br/>
-          <input type="text" pattern="[A-Ba-b]{5}" value={this.state.fname} onChange={this.handleChange} placeholder="First Name" required />
+          <input type="text" pattern="[A-Za-z]{1,30}" value={this.state.fname} title="Name must be between 2 and 30 characters and no numbers!" onChange={this.handleChange} placeholder="First Name" required />
         </label>
         <label>
           Email:*<br/>
