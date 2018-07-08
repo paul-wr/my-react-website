@@ -239,11 +239,11 @@ class Contact extends React.Component {
         <i class="fa fa-envelope"></i>
         <label>
           Name:*<br/>
-          <input type="text" pattern="[A-Za-z]{1,30}" value={this.state.fname} title="Name must be between 2 and 30 characters and no numbers!" onChange={this.handleChange} placeholder="First Name" required />
+          <input type="text" pattern="[A-Za-z]{1,30}" value={this.state.fname} title="Name must be between 2 and 30 characters and no numbers!" onChange={this.handleChange} placeholder="Name..." required />
         </label>
         <label>
           Email:*<br/>
-          <input type="email" value={this.state.email} onChange={this.handleChange} placeholder="Last Name" required />
+          <input type="email" value={this.state.email} onChange={this.handleChange} placeholder="Email..." required />
         </label>
         <label><br/>
           Message: <br/>

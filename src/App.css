@@ -368,22 +368,32 @@ padding: 0 5% 5% 5%;
 }
 
 #contactForm textarea {
-width: 100%;  
+width: 98%;  
 height: 100px;
+margin: 0 auto;
+display: block;
+position: relative;
 }
 
 #contactForm input {
-height: 20px;  
-width: 100%;
+width: 98%;    
+height: 2.5em;  
+margin: 0 auto;
+display: block;
+position: relative;
 }
 
 #contactForm input[type=submit] {
-margin-top: 5px;  
-height: auto;  
-width: 20%;
-background-color: #052551; 
+height: auto;
+width: 175px;
+background-color: green;
 color: #f2f2f2;
 padding: 10px;
+border-radius: 17px;
+}
+
+#contactForm input[type=text] {
+margin-bottom: 5px;
 }
 
 #success {
@@ -419,6 +429,10 @@ media queries
 */
 
 @media screen and (max-width: 500px){
+.main-nav li a {
+color: #052551;
+padding: 1% 30%!important;
+}   
 .overlay {
 height: 20%;
 }  
