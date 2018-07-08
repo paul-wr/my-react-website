@@ -430,7 +430,7 @@ media queries
 
 @media screen and (max-width: 500px){
 #home-section-one {
-background-image: url('city_mobile.png');
+background-image: url('city_mobile.png')!important;
 /* Full height */
 /* Create the parallax scrolling effect */;
 background-size: 100% 635px!important;
