@@ -429,6 +429,17 @@ media queries
 */
 
 @media screen and (max-width: 500px){
+#home-section-one {
+background-image: url('city_mobile.png');
+/* Full height */
+height: 32em; 
+width:100%;
+/* Create the parallax scrolling effect */;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}  
 .main-nav li a {
 color: #052551;
 padding: 1% 30%!important;
