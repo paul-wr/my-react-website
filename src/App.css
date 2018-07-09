@@ -433,16 +433,16 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 
 only screen and (min-device-pixel-ratio: 2) {
 #home-section-one {
-background-image: url('member3.jpg');
-background-size: 300px 300px;
-height: 20em;  
+background-image: url("member3.jpg");
+background-size: auto 749px;
+height: 749px;
  } 
 }
 @media screen and (max-width: 500px){
 #home-section-one {
-background-image: url('member3.jpg');
-background-size: 300px 300px;
-height: 20em;  
+background-image: url("member3.jpg");
+background-size: auto 749px;
+height: 749px;  
  }  
 .main-nav li a {
 color: #052551;
