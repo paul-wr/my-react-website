@@ -433,7 +433,9 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 
 only screen and (min-device-pixel-ratio: 2) {
 #home-section-one {
-background-image: url('logo.svg')!important;
+background-image: url('member3.jpg')!important;
+height: 20em;  
+
 /* Create the parallax scrolling effect */;
 background-size: 100% 400px;
 background-repeat: no-repeat;
@@ -441,7 +443,8 @@ background-repeat: no-repeat;
 }
 @media screen and (max-width: 500px){
 #home-section-one {
-background-image: url('logo.svg')!important;
+height: 20em;  
+background-image: url('member3.jpg')!important;
 /* Create the parallax scrolling effect */;
 background-size: 100% 400px;
 background-repeat: no-repeat;
