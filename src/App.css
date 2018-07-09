@@ -437,10 +437,10 @@ content: "";
 background-image: url("city.jpg");
 background-size: cover; 
 position: absolute;
-top: 100px; 
+top: 112px; 
 left: 0; 
 width: 100%; 
-height: 100%; 
+height: 32em;  
 } 
 }
 @media screen and (max-width: 500px){
@@ -449,10 +449,10 @@ content: "";
 background-image: url("city.jpg");
 background-size: cover; 
 position: absolute;
-top: 100px; 
+top: 112px; 
 left: 0; 
 width: 100%; 
-height: 100%; 
+height: 32em; 
 }   
 .contact {
 background-color: #fff;  
