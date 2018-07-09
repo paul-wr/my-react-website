@@ -434,6 +434,7 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 #home-section-one {
 background-image: url("member3.jpg");
+background-color: #F4F4F2;
 background-size: auto 749px;
 height: 749px;
  } 
@@ -441,6 +442,7 @@ height: 749px;
 @media screen and (max-width: 500px){
 #home-section-one {
 background-image: url("member3.jpg");
+background-color: #F4F4F2;
 background-size: auto 749px;
 height: 749px;  
  }  
