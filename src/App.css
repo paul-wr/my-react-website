@@ -433,7 +433,6 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 
 only screen and (min-device-pixel-ratio: 2) {
 #home-section-one { 
-content: ""; 
 background-image: url("city.jpg");
 background-size: 32em 30em; 
 position: absolute;
@@ -449,7 +448,6 @@ z-index: 1000!important
 }
 @media screen and (max-width: 500px){
 #home-section-one { 
-content: ""; 
 background-image: url("city.jpg");
 background-size: 32em 30em; 
 position: absolute;
