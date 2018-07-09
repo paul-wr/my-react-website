@@ -444,7 +444,7 @@ height: 32em;
 } 
 .contact, .contact a {
 position: absolute;
-top: 200px;
+top: 50%;
 left: 25%;
 right: 25%;
 height: 3%;
@@ -468,7 +468,7 @@ height: 32em;
 }   
 .contact, .contact a {
 position: absolute;
-top: 200px;
+top: 50%;
 left: 25%;
 right: 25%;
 height: 3%;
