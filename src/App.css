@@ -442,6 +442,10 @@ left: 0;
 width: 100%; 
 height: 32em;  
 } 
+.contact {
+background-color: #fff;  
+z-index: 1000!important
+} 
 }
 @media screen and (max-width: 500px){
 #home-section-one:before { 
@@ -456,6 +460,7 @@ height: 32em;
 }   
 .contact {
 background-color: #fff;  
+z-index: 1000!important
 } 
 .main-nav li a {
 color: #052551;
