@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-
-
 html, body {
 width: 100%;
 min-height: 100%;
@@ -429,6 +427,17 @@ media queries
 */
 
 @media screen and (max-width: 500px){
+#home-section-one {
+background-image: url('logo.svg');
+/* Full height */
+height: 32em; 
+width:100%;
+/* Create the parallax scrolling effect */;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}  
 .main-nav li a {
 color: #052551;
 padding: 1% 30%!important;
@@ -512,10 +521,12 @@ color: #052551;
 }
 .main-nav {
 text-align: center;
+padding-top: 2px!important;
 padding: 0;
 width: 100%;
 display: none;
 margin-top: 110px;
+background-color: #052551;
   }  
 .fa-dz-nav{
 background: #f2f2f2;
