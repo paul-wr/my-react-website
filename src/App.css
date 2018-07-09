@@ -40,7 +40,7 @@ margin: 0px;
 }
 
 #home-section-one {
-background-image: url('city.jpg')!important;
+background-image: url('city.jpg');
 /* Full height */
 height: 32em; 
 width:100%;
@@ -425,7 +425,25 @@ text-align: center;;
 media queries 
 =============
 */
+@media only screen and (min--moz-device-pixel-ratio: 2),
 
+only screen and (-o-min-device-pixel-ratio: 2/1),
+
+only screen and (-webkit-min-device-pixel-ratio: 2),
+
+only screen and (min-device-pixel-ratio: 2) {
+home-section-one {
+background-image: url('logo.svg')!important;
+/* Full height */
+height: 32em; 
+width:100%;
+/* Create the parallax scrolling effect */;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+  }  
+}
 @media screen and (max-width: 500px){
 #home-section-one {
 background-image: url('logo.svg');
