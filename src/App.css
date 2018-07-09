@@ -40,7 +40,7 @@ margin: 0px;
 }
 
 #home-section-one {
-background-image: url('city.jpg');
+background-image: url('city.jpg')!important;
 /* Full height */
 height: 32em; 
 width:100%;
