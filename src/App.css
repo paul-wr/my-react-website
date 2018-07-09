@@ -563,11 +563,14 @@ color: #052551;
 text-align: center;
 padding-top: 2px!important;
 padding: 0;
+position: absolute;
+top: 0px;
+z-index: 10000;
 width: 100%;
 display: none;
 margin-top: 110px;
 background-color: #052551;
-  }  
+} 
 .fa-dz-nav{
 background: #f2f2f2;
 color: #052551;
