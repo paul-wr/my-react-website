@@ -435,7 +435,7 @@ only screen and (min-device-pixel-ratio: 2) {
 #home-section-one {
 background-image: url("member3.jpg");
 background-color: #052551;
-background-size: auto 749px;
+background-size: auto 300px;
 height: 749px;
  } 
 }
@@ -443,9 +443,12 @@ height: 749px;
 #home-section-one {
 background-image: url("member3.jpg");
 background-color: #052551;
-background-size: auto 749px;
+background-size: auto 300px;
 height: 749px;  
  }  
+.contact {
+background-color: #fff;  
+} 
 .main-nav li a {
 color: #052551;
 padding: 1% 30%!important;
