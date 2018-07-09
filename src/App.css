@@ -432,28 +432,18 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 
 only screen and (min-device-pixel-ratio: 2) {
-home-section-one {
+#home-section-one {
 background-image: url('logo.svg')!important;
-/* Full height */
-height: 32em; 
-width:100%;
 /* Create the parallax scrolling effect */;
-background-attachment: fixed;
-background-size: 100% auto;
-background-position: center;
+background-size: 100% 400px;
 background-repeat: no-repeat;
-  }  
+ } 
 }
 @media screen and (max-width: 500px){
 #home-section-one {
 background-image: url('logo.svg')!important;
-/* Full height */
-height: 32em; 
-width:100%;
 /* Create the parallax scrolling effect */;
-background-attachment: fixed;
-background-size: 100% 400p;
-background-position: center;
+background-size: 100% 400px;
 background-repeat: no-repeat;
 }  
 .main-nav li a {
