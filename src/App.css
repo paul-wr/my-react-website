@@ -439,22 +439,22 @@ height: 32em;
 width:100%;
 /* Create the parallax scrolling effect */;
 background-attachment: fixed;
+background-size: 100% auto;
 background-position: center;
 background-repeat: no-repeat;
-background-size: cover;
   }  
 }
 @media screen and (max-width: 500px){
 #home-section-one {
-background-image: url('logo.svg');
+background-image: url('logo.svg')!important;
 /* Full height */
 height: 32em; 
 width:100%;
 /* Create the parallax scrolling effect */;
 background-attachment: fixed;
+background-size: 100% 400p;
 background-position: center;
 background-repeat: no-repeat;
-background-size: cover;
 }  
 .main-nav li a {
 color: #052551;
