@@ -436,7 +436,7 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 #home-section-one:before { 
 content: ""; 
-background-image: url("city.jpg");
+background-image: url("city_mobile.png");
 background-size: cover; 
 position: absolute;
 top: 112px; 
@@ -451,7 +451,7 @@ display: none;
 @media screen and (max-width: 500px){
 #home-section-one:before { 
 content: ""; 
-background-image: url("city.jpg");
+background-image: url("city_mobile.png");
 background-size: cover; 
 position: absolute;
 top: 112px; 
