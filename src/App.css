@@ -433,22 +433,19 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 
 only screen and (min-device-pixel-ratio: 2) {
 #home-section-one {
-background-image: url('member3.jpg')!important;
+background-image: url('member3.jpg');
+background-size: 0 0 / auto 749px;
 height: 20em;  
-
-/* Create the parallax scrolling effect */;
-background-size: 100% 400px;
 background-repeat: no-repeat;
  } 
 }
 @media screen and (max-width: 500px){
 #home-section-one {
+background-image: url('member3.jpg');
+background-size: 0 0 / auto 749px;
 height: 20em;  
-background-image: url('member3.jpg')!important;
-/* Create the parallax scrolling effect */;
-background-size: 100% 400px;
 background-repeat: no-repeat;
-}  
+ }  
 .main-nav li a {
 color: #052551;
 padding: 1% 30%!important;
